@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/uihelper.dart';
+import '../bottomnav/bottom_navigation.dart';
 
 class LoginScreen extends StatelessWidget{
   const LoginScreen({super.key});
@@ -41,7 +42,9 @@ class LoginScreen extends StatelessWidget{
                     SizedBox(
                       height: 48,
                       width: 295,
-                      child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
+                      child: ElevatedButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavScreen()));
+                      },style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.yellow,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)
